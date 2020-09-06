@@ -1,0 +1,22 @@
+/* mixin */
+// 居中
+#center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// 单行省略号
+#ell {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+// 扩大单击区域
+#extend-click {
+  position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px; bottom: -10px; left: -10px; right: -10px;
+    };
+}
