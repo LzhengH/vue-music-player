@@ -64,18 +64,19 @@ export const footerImages = [
 ]
 
 // discover中的数据
-export const dicoverMenu = [
+export const discoverMenu = [
   {
     title: "推荐",
     link: "/discover/recommend"
   },
   {
     title: "排行榜",
-    link: "/discover/ranking"
+    link: "/discover/toplist"
   },
   {
     title: "歌单",
-    link: "/discover/songs"
+    link: "/discover/playlist",
+    rIcon: true
   },
   {
     title: "主播电台",

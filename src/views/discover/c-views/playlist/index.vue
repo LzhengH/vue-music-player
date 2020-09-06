@@ -1,7 +1,5 @@
 <template>
-  <div>
-    discover
-  </div>
+  <div>playlist</div>
 </template>
 
 <script>

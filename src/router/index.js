@@ -14,7 +14,37 @@ const routes = [
       },
       {
         path: 'discover',
-        component: () => import('src/views/Discover')
+        component: () => import('src/views/discover'),
+        children: [
+          {
+            path: '',
+            redirect: 'recommend'
+          },
+          {
+            path: 'recommend',
+            component: () => import('src/views/discover/c-views/recommend')
+          },
+          {
+            path: 'toplist',
+            component: () => import('src/views/discover/c-views/toplist')
+          },
+          {
+            path: 'playlist',
+            component: () => import('src/views/discover/c-views/playlist')
+          },
+          {
+            path: 'djradio',
+            component: () => import('src/views/discover/c-views/djradio')
+          },
+          {
+            path: 'artist',
+            component: () => import('src/views/discover/c-views/artist')
+          },
+          {
+            path: 'album',
+            component: () => import('src/views/discover/c-views/album')
+          },
+        ]
       }
     ]
   }
@@ -22,7 +52,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  linkActiveClass: 'link-active'
 })
 
 export default router
